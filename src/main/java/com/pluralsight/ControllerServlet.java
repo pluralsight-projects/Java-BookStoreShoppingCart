@@ -140,7 +140,7 @@ public class ControllerServlet extends HttpServlet {
 		bookDAO.updateBook(newBook);
 		response.sendRedirect("list");
 	}
-
+	
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
