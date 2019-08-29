@@ -45,10 +45,20 @@ public class CartController extends HttpServlet {
 				case "/addcart":
 					 addToCart(request, response);
            break;
+<<<<<<< HEAD
 				case"/delete":
 				   deleteFromCart(request, response);
 		   break;
            
+=======
+				case "/delete":
+					deleteFromCart(request,response);
+			break;
+				case "/update":
+					updateCart(request,response);
+			break;
+			
+>>>>>>> 9d2e5725640647aff342bfe5fa8e6ed52be0fdae
         default:
            break;
 			}
@@ -86,7 +96,28 @@ public class CartController extends HttpServlet {
 	 // Add this item and quantity to the ShoppingCart
    shoppingCart.addCartItem(existingBook, quantity);
   }
-
+  private void deleteFromCart(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException{
+	HttpSession session =request.getSession();
+	int index=Integer.parseInt(request.getParameter("index"));
+	ShoppingCart cart =(ShoppingCart) session.getAttribute("cart");
+	cart.deleteCartItem(index);
+	
+		
+	}
+  private void updateCart(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException{
+	  
+	  HttpSession session = request.getSession();
+	  int index=Integer.parseInt(request.getParameter("index"));
+	  int quantity=Integer.parseInt(request.getParameter("quantity"));
+	  ShoppingCart cart =(ShoppingCart) session.getAttribute("cart");
+	 
+	  cart.updateCartItem(index, quantity);
+	  
+	  
+	  
+	  
+  }
+  
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		doGet(request, response);
 	}
