@@ -38,7 +38,7 @@
 	                    <td> ${ item.getTitle() } </td>
 	                    <td> ${ item.getAuthor() } </td>
 	                    <td> <fmt:formatNumber value = "${ item.getPrice() }" type = "currency"/>  </td>
-                      <td><input type="number" name="quantity" min="1" max="50" value="1"></td>
+                      <td><input type="number" name="quantity" min="" max="50" value="1"></td>
                       <td><input type="submit" value="Add to Cart"></td>
 	                </form></tr>
 	            </c:forEach>

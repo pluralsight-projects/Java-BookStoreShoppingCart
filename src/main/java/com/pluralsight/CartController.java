@@ -45,6 +45,10 @@ public class CartController extends HttpServlet {
 				case "/addcart":
 					 addToCart(request, response);
            break;
+				case"/delete":
+				   deleteFromCart(request, response);
+		   break;
+           
         default:
            break;
 			}

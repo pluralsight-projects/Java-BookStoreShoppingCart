@@ -42,7 +42,7 @@ public class ShoppingCart {
  public void setOrderTotal(double dblOrderTotal) {
   this.dblOrderTotal = dblOrderTotal;
  }
-
+ public void deleteCartItem(int index)
  protected void calculateOrderTotal() {
   double dblTotal = 0;
   for(int counter=0;counter<cartItems.size();counter++) {
