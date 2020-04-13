@@ -140,7 +140,17 @@ public class ControllerServlet extends HttpServlet {
 		bookDAO.updateBook(newBook);
 		response.sendRedirect("list");
 	}
+<<<<<<< HEAD
+	private void deleteFromCart(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException{
+		
+		
+		
+		
+	}
 
+=======
+	
+>>>>>>> 9d2e5725640647aff342bfe5fa8e6ed52be0fdae
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
